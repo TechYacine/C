@@ -1,0 +1,20 @@
+/*
+Exercise 2
+
+Consider a record E defined by two pieces of information:
+- T: an array of integers that can contain a maximum of 100 elements.
+- N: the number of elements of the array T.
+
+Given a character string M, write a parameterized action that returns a record of type E 
+containing all the positions of the string "ab" in the string M.
+
+Using the Find parameterized action, write an algorithm to remove all occurrences of the string "ab".
+
+Example:
+M = "faabaababbaabrs"
+
+Result:
+
+Positions: [ 3, 6, 8, 12 ]
+Count: 4
+*/

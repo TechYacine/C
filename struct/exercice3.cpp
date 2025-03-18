@@ -3,13 +3,13 @@
 #include <string.h>
 
 /*
-Soit un enregistrement E défini par deux informations : 
-   -- T un tableau d’entiers pouvant contenir au maximum 100 éléments;
-   -- N le nombre d’éléments du tableau T.
-Soit une chaîne de caractères M, écrire une action paramétrée qui retourne un enregistrement de type E contenant toutes les positions de la chaîne ‘ab‘ dans la chaîne M.
+Soit un enregistrement E dï¿½fini par deux informations : 
+   -- T un tableau dï¿½entiers pouvant contenir au maximum 100 ï¿½lï¿½ments;
+   -- N le nombre dï¿½ï¿½lï¿½ments du tableau T.
+Soit une chaï¿½ne de caractï¿½res M, ï¿½crire une action paramï¿½trï¿½e qui retourne un enregistrement de type E contenant toutes les positions de la chaï¿½ne ï¿½abï¿½ dans la chaï¿½ne M.
 
 Exemple :
-            M = ‘faabaababbaabrs'
+            M = ï¿½faabaababbaabrs'
             Resultat: { [3, 6, 8, 12] , 4 }
 */
 
@@ -44,11 +44,10 @@ void afficherE(E res) {
 }
 
 int main() {
-    char M[201];
+    char M[201]= "absubnababajbabapiufbababa";
     E res;
     int i, j, k, l;
-    printf("Donner une chaine de caracteres ...\n");
-    scanf("%s", M);
+    
     l = strlen(M);
     res = Rechercher(M);
     afficherE(res);
