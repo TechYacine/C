@@ -1,6 +1,6 @@
 #include<stdio.h> 
 #include<stdlib.h>
-#include<stdlib.h>
+
 
 typedef struct entlist{
     int info ;
@@ -9,7 +9,8 @@ typedef struct entlist{
 int main(){
 // Remplire la list chaineé :
     int N , i ;
-    entlist *T = NULL, *p ;
+    entlist *T = NULL ;
+    entlist *p = NULL ;
     // Give the number : 
     do {
         printf("Enter the number \n");
