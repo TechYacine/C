@@ -22,12 +22,13 @@ E Rechercher(char M[]) {
     int i, l;
     E res;
     res.N = 0;
-    l = strlen(M) - 1;
+    l = strlen(M) - 1; // l is gonna be used as an index so we take the length- 1 because in indexing it is the last elemnet .
+    
     i = 0;
-    while(i < l) {
+    while(i < l) { // we put i < l and not <= because the last it is impossible for the last letter to be an "ab". so we don't check it .
         if ((M[i] == 'a') && (M[i+1] == 'b')) {
             res.T[res.N] = i;
-            res.N++;
+            res.N++; // it is important to take in consideration this operation because it will affect all the rest of the code.
             i += 2;
         } else {
             i++;
@@ -52,13 +53,13 @@ int main() {
     res = Rechercher(M);
     afficherE(res);
     while (res.N != 0) {
-        for (j = res.N - 1; j >= 0; j--) {
+        for (j = res.N - 1; j >= 0; j--) {//The loop iterates from the last occurrence to the first (reverse order). This is important because removing characters from the end prevents messing up the indices of earlier occurrences.
            for (k = res.T[j]; k < l; k++)
              M[k] = M[k + 2];
-           l = l - 2;
+           l = l - 2;   
            M[l] = '\0';
         }
-        res = Rechercher(M);
+        res = Rechercher(M); 
     }
     printf("Nouvelle Chaine sans 'ab' est: %s ...\n", M);
     return 0;
